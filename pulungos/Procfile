@@ -1,0 +1,1 @@
+web: gunicorn pulungos.wsgi --log-file -

@@ -44,3 +44,15 @@ def getMyUsers(request):
     padre = padres.objects.all()
     serializer = padresSerializer(padre, many=True)
     return Response(serializer.data)
+
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def UpdateTouchId(request, pk):
+
+    padre = padres.objects.get(id_padre=pk)
+    data = request.data
+    padre.huella = data['huella']
+    padre.save()
+    serializer = padresSerializer(padre, many=False)
+    return Response(serializer.data)

@@ -27,6 +27,7 @@ urlpatterns = [
     path('salones/', include('backend.urls.salones_urls')),
     path('roles/', include('backend.urls.roles_urls')),
     path('padres/', include('backend.urls.padres_urls')),
+    #path('doctor/', include('backend.urls.Ia_urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
