@@ -95,7 +95,7 @@ def UpdateUserProfile(request):
     user.lastname = data['apellido']
     user.edad = data['edad']
     user.temperatura = data['temperatura']
-    user.id_trabajo = data['id_trabajo']
+    user.id_trabajo = data['id_salon']
 
     if data['password'] != '':
         user.password = data['password']
